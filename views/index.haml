@@ -1,0 +1,11 @@
+%fieldset
+  %form#invite_form{:method => "post", :name => 'invite_form'}
+    %ul
+      %li
+        %label{:for => 'invite-email'}
+          Email for Beta invites
+        %input{:type => 'text', :name => 'email', :id => 'interview-email', :required => "true"}
+      %li
+        %a{:class => 'large green awesome', :onclick=>"document.invite_form.submit();"}
+          Invite me &#x21A9;
+        %em{:class => 'mandatory'} No spam. We promise!

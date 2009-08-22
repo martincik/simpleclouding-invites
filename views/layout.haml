@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title SimpleClouding - Simple way to manage your clouds.
+    %link{:rel=>'stylesheet', :href=>'/stylesheets/invites.css', :type => "text/css"}
+  %body
+    %header
+      %h1 SimpleClouding
+      %em Simple way to manage your clouds.
+    - if flash[:error]
+      %section{ :id => 'error' }
+        = flash[:error]
+    - if flash[:notice]
+      %section{ :id => 'notice' }
+        = flash[:notice]
+    %section{ :id => 'content' }
+      = yield
+    %footer
+      %p &copy; 2009 Ladislav Martincik (@martincik)
