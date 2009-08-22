@@ -10,7 +10,7 @@ set :application, "simpleclouding"
 set :deploy_to, "/mnt/app/#{application}"
 set :deploy_via, :export
 
-set :repository, "git@github.com:lacomartincik/simpleclouding-gem.git" 
+set :repository, "git@github.com:lacomartincik/simpleclouding-invites.git" 
 set :deploy_via, :remote_cache
 set :scm, 'git'
 set :branch, 'master'
