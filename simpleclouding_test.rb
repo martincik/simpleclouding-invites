@@ -13,8 +13,7 @@ class SimpleCloudingTest < Test::Unit::TestCase
   end
   
   def setup
-    # NOTE: I wanted to use Invite.delete_all but doesn't work and couldn't find any info.
-    repository(:default).adapter.query('DELETE FROM invites')
+    Invite.all.destroy!
   end
 
   def test_it_returns_form_with_email
