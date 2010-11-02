@@ -40,21 +40,3 @@ namespace :deploy do
   end
 end
 
-namespace :deploy do
-  desc "Update the crontab file"
-  task :update_crontab, :roles => :db do
-    run "cd #{release_path} && bundle exec whenever --update-crontab #{application}"
-  end
-end
-after "deploy:symlink", "deploy:update_crontab"
-
-task :copy_database_yml do
-  run "cp #{shared_path}/config/database.yml #{release_path}/config"
-end
-after "deploy:update_code", :copy_database_yml
-
-task :copy_shopify_yml do
-  run "cp #{shared_path}/config/shopify.yml #{release_path}/config"
-end
-after "deploy:update_code", :copy_shopify_yml
-
