@@ -4,7 +4,7 @@ class Invite
   property :id, Serial
   property :created_at, DateTime
   property :email, String, 
-    :nullable => false, 
+    :required => true,
     :unique => true, 
     :format => :email_address,
     :messages => {

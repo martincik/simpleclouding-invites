@@ -57,7 +57,7 @@ class SimpleCloudingTest < Test::Unit::TestCase
     
     follow_redirect!
     assert last_response.ok?
-    assert_equal "We need your email address., Doesn't look like an email address to me ...", flash_error(last_response.body).strip
+    assert_equal "We need your email address.", flash_error(last_response.body).strip
   end
 
   def test_it_doesnt_add_already_added_email

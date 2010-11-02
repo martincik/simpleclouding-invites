@@ -5,7 +5,6 @@ require 'sass'
 require 'dm-core'
 require 'dm-validations'
 require 'dm-aggregates'
-require 'dm-more'
 require 'fileutils'
 require 'invite'
 
